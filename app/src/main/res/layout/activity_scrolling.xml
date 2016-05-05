@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.kuaidi.widget.BehaviorRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.kuaidi.behaviorwidget.ScrollingActivity">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@mipmap/timg"
+        android:visibility="visible"
+        app:behavior="com.kuaidi.behavior.ScrollScaleBehavior" />
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:background="#0000ff"
+        app:behavior="com.kuaidi.behavior.ScrollAlphaBehavior" />
+
+    <include
+        layout="@layout/content_scrolling"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/image" />
+
+
+</com.kuaidi.widget.BehaviorRelativeLayout>
